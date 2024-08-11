@@ -34,6 +34,7 @@ class ServiceConfig(BaseModel):
     )
     valid_audiences: list[str] | None = None
     requires_service_token: bool | None = True
+    allowed_endpoints: list[str] | None = None
 
 
 class AuditLogProviderType(str, enum.Enum):

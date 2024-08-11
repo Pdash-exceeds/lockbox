@@ -3,6 +3,7 @@
     "github_public": {
       "base_url": "https://api.github.com",
       "requires_service_token": false
+      
     },
     "github_public_behind_service_token": {
       "base_url": "https://api.github.com",
@@ -12,9 +13,20 @@
       "base_url": "https://api.github.com",
       "credential": {
         "type": "bearer",
-        "token": "YOUR_GITHUB_API_TOKEN"
+        "token": "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",
+        "allowed_endpoints": [
+        "repos/{repo_owner}/{repo}/pulls?state=all&per_page=50",
+        "repos/{repo_owner}/{repo}/issues/{pr_number}/timeline",
+        "orgs/{repo_owner}/repos",
+        "users/{user_login}",
+        "repos/{repo_owner}/{repo}/branches",
+        "repos/{repo_owner}/{repo}/commits",
+        "repos/{repo_owner}/{repo}/commits?since={since_date}",
+        "repos/{repo_owner}/{repo}/commits/{sha}/comments",
+        "repos/{repo_owner}/{repo}/commits/{sha}/branches-where-head"
+      ]
       },
-      "requires_service_token": true,
+      "requires_service_token": false,
       "valid_audiences": [
         "zapier_webhook"
       ]
