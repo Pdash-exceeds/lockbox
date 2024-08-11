@@ -226,3 +226,17 @@ We will consider other factors later, such as:
   options. E.g.
     * [OpenResty / Nginx with Lua](https://openresty.org/)
     * [Njs scripting](https://nginx.org/en/docs/njs/)
+ 
+## Exceeds Specifics
+
+* Update github_private_behind_service_token.credential.token to a valid PAT in sample_config.json
+* Generate a new service token :
+ `export SERVICE_TOKEN=$(python generate_service_token.py \
+    --service-name github_private_behind_service_token \
+    --signing-key-file signing_key.txt \
+    --audience walkthrough
+    )`
+* export LOCKBOX_CONFIG_PATH to sample_config.json
+* export LOCKBOX_SIGNING_KEY_FILE to signing_key.txt (update contents to new value with `openssl rand -base64 32`)
+* Run `python run.py` or `gunicorn -w 4 -b 0.0.0.0:8000 run:app` 
+
