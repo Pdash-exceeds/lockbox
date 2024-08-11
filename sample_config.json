@@ -13,7 +13,7 @@
       "base_url": "https://api.github.com",
       "credential": {
         "type": "bearer",
-        "token": "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",
+        "token": "REPLACE_WITH_GITHUB_PAT",
         "allowed_endpoints": [
         "repos/{repo_owner}/{repo}/pulls?state=all&per_page=50",
         "repos/{repo_owner}/{repo}/issues/{pr_number}/timeline",
